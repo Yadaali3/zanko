@@ -1,0 +1,2 @@
+module zanko1 {
+}
