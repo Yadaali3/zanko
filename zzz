@@ -1,0 +1,41 @@
+
+
+public class yad {
+    public static void main(String[] args) {
+        String firtname="yad";
+        String fathername="ali";
+        String grandfather="mohammed";
+
+        System.out.println("How many characters in your first name ? " + firtname.length());
+        System.out.println("How many characters in your father name ? " + fathername.length());
+        System.out.println("How many characters in your grand father name ? " + grandfather.length());
+        
+        
+        String full= firtname + fathername + grandfather ;
+        int count;
+
+
+        char arr[]=full.toCharArray();
+
+            
+            for(int i=0;i<arr.length;i++)
+            {
+                count=1;
+                for(int j=i+1;j<arr.length;j++)
+                {
+
+                    if (arr[i]==arr[j] && arr[i] !=' ')
+                    {
+                        count++;
+                        arr[j]='0';
+                    }
+                }
+                if(count> 1 && arr[i]!= '0'){
+
+                    String h = Integer.toString(count);
+                    System.out.println(arr[i] + " : " + h);
+                }
+            }
+
+    }
+}
